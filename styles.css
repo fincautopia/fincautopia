@@ -13,6 +13,7 @@ h1, h2, h3 {
 }
 
 /* Top Bar */
+/* Center the text in the top bar */
 #top-bar {
     position: sticky;
     top: 0;
@@ -22,8 +23,8 @@ h1, h2, h3 {
     padding: 1rem 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    opacity: 1;
-    transition: opacity 0.3s ease;
+    font-size: 2rem; /* Double the size of the text */
+    font-weight: bold; /* Make it stand out more */
 }
 
 /* Hide Top Bar on Scroll */
