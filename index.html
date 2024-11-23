@@ -8,36 +8,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Honesty&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header id="main-header">
+    <header id="hero-section">
         <h1>Finca Utopia</h1>
+        <p>Reconnect with Nature in Costa Rica</p>
+        <a href="#about" class="btn">Discover Our Farm</a>
     </header>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#accommodations">Accommodations</a></li>
+            <li><a href="#experience">Farm Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <section id="about">
         <h2>About Us</h2>
-        <p>Finca Utopia is a family-run farm in Costa Rica, specializing in medicinal plants and sustainable living. Experience tranquility and rustic charm with us.</p>
+        <div class="content-grid">
+            <p>Finca Utopia is a family-run farm nestled in the heart of Costa Rica. We specialize in medicinal plants and sustainable living. Experience tranquility and rustic charm with us.</p>
+            <img src="about.jpg" alt="About Finca Utopia">
+        </div>
     </section>
 
     <section id="accommodations">
         <h2>Accommodations</h2>
-        <div class="card">
-            <h3>Rustic Cabin</h3>
-            <p>A private cabin with a queen bed and kitchenette. $75/night.</p>
-        </div>
-        <div class="card">
-            <h3>Shared Bunk Beds</h3>
-            <p>Affordable rooms with bunk beds for groups. $20/night per person.</p>
+        <div class="card-grid">
+            <div class="card">
+                <img src="cabin.jpg" alt="Rustic Cabin">
+                <h3>Rustic Cabin</h3>
+                <p>A private cabin with a queen bed and kitchenette. $75/night.</p>
+            </div>
+            <div class="card">
+                <img src="bunkbeds.jpg" alt="Shared Bunk Beds">
+                <h3>Shared Bunk Beds</h3>
+                <p>Affordable rooms with bunk beds for groups. $20/night per person.</p>
+            </div>
         </div>
     </section>
 
     <section id="experience">
         <h2>Farm Experience</h2>
         <p>Discover our medicinal plants and their traditional uses. Join a workshop or guided tour!</p>
+        <div class="parallax" style="background-image: url('plants.jpg');"></div>
     </section>
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Email: info@fincautopia.org</p>
-        <p>Phone: +506 123-4567</p>
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -50,12 +67,15 @@
 
             <button type="submit">Send Message</button>
         </form>
+        <div class="contact-info">
+            <p>Email: info@fincautopia.org</p>
+            <p>Phone: +506 123-4567</p>
+            <iframe src="https://www.google.com/maps/embed?pb=" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Finca Utopia. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
