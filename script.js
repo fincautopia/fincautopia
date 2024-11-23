@@ -1,16 +1,14 @@
-// Adding fade-in effect on scroll
-const faders = document.querySelectorAll('.fade-in');
+let lastScrollTop = 0;
+const topBar = document.getElementById("top-bar");
 
-const observer = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('appear');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
+window.addEventListener("scroll", () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-faders.forEach(fader => observer.observe(fader));
+    if (scrollTop > lastScrollTop) {
+        topBar.classList.add("hidden"); // Hide on scroll down
+    } else {
+        topBar.classList.remove("hidden"); // Show on scroll up
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Avoid negative scroll values
+});
