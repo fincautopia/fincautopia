@@ -68,8 +68,10 @@ h1, h2, h3 {
 }
 
 .card img {
-    max-width: 100%;
-    border-radius: 5px;
+    max-width: 100%; /* Ensure images stay within the card width */
+    max-height: 200px; /* Limit the height of the images */
+    object-fit: cover; /* Crop the images to fit nicely */
+    border-radius: 5px; /* Keep the rounded edges */
     margin-bottom: 1rem;
 }
 
