@@ -13,7 +13,6 @@ h1, h2, h3 {
 }
 
 /* Top Bar */
-/* Center the text in the top bar */
 #top-bar {
     position: sticky;
     top: 0;
@@ -23,20 +22,14 @@ h1, h2, h3 {
     padding: 1rem 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 2rem; /* Double the size of the text */
-    font-weight: bold; /* Make it stand out more */
 }
 
-/* Hide Top Bar on Scroll */
-.hidden {
-    opacity: 0;
-}
-
-/* Hero Section */
+/* Hero Section with Parallax Effect */
 #hero-section {
     position: relative;
     height: 100vh;
     background: url('house.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Enables parallax effect */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,6 +49,14 @@ h1, h2, h3 {
     margin-top: 1rem;
 }
 
+/* Parallax Section */
+.parallax {
+    height: 300px;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 2rem 0;
+}
+
 /* Card Style */
 .card {
     max-width: 600px;
@@ -68,19 +69,9 @@ h1, h2, h3 {
 }
 
 .card img {
-    max-width: 100%; /* Ensure images stay within the card width */
-    max-height: 200px; /* Limit the height of the images */
-    object-fit: cover; /* Crop the images to fit nicely */
-    border-radius: 5px; /* Keep the rounded edges */
+    max-width: 100%;
+    border-radius: 5px;
     margin-bottom: 1rem;
-}
-
-/* Parallax Section */
-.parallax {
-    height: 300px;
-    background-attachment: fixed;
-    background-size: cover;
-    margin: 2rem 0;
 }
 
 /* Footer */
